@@ -1,0 +1,24 @@
+
+// Colors
+
+$colors: (
+  black-haze: #F6F7F8,
+  blue-gray: #68A3D7,
+  cerulean: #1FAEDF,
+  cinder: #232932,
+  neutral-dark: #000000,
+  neutral-grey: #B2AEA3,
+  neutral-light: #FFFFFF,
+  off-white: #EEEEEE,
+  ship-cove: #6D95C2,
+  snow-drift: #F9F9F9
+);
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}

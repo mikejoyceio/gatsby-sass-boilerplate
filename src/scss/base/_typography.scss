@@ -1,0 +1,27 @@
+
+// Typography
+
+body {
+  @include font-family(primary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @include font-weight(extra-bold);
+  @include font-family(primary);
+  text-transform: uppercase;
+}
+
+@mixin text($type) {
+  @if $type == primary {
+    @include font-family(primary);
+    color: color(neutral-dark);
+  }
+  @if $type == secondary {
+    @include font-family(secondary);
+    color: color(neutral-grey);
+  }
+}
+
+p {
+
+}
